@@ -21,6 +21,7 @@ namespace MatchingGame
             "!", "!", "N", "N", ",", ",", "k", "k",
             "b", "b", "v", "v", "w", "w", "z", "z"
         };
+        private Label firstClicked = null; private Label secondClicked = null;
 
         // ---------
         // Methods
@@ -56,17 +57,60 @@ namespace MatchingGame
         /// <param name="e"></param>
         private void cell_Label_Click(object sender, EventArgs e)
         {
-            //If the label has not been revealed yet, reveal it
-            //by changing the ForeColor to Color.Black
+            //Ignore the click if the program is busy resetting a mismatch
+            if(resetMismatch_Timer.Enabled == true)
+            {
+                return;
+            }
+
             Label clickedLabel = sender as Label;
             if (clickedLabel != null)
             {
+                //Ignore the click if label is already revealed (ForeColor == Black)
                 if(clickedLabel.ForeColor == Color.Black)
                 {
                     return;
                 }
-                clickedLabel.ForeColor = Color.Black;
+
+                //Set firstClicked to clickedLabel if applicable
+                if(firstClicked == null)
+                {
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Black;
+                    return;
+                }
+
+                //Set secondClicked to clickedLabel (At this point we know we are on the second click)
+                secondClicked = clickedLabel;
+                secondClicked.ForeColor = Color.Black;
+
+                //If icons match, keep them revealed. Reset trackers
+                if(firstClicked.Text == secondClicked.Text)
+                {
+                    firstClicked = null;
+                    secondClicked = null;
+                    return;
+                }
+
+                //Reset the mismatched icons
+                resetMismatch_Timer.Start();
             }
+        }
+        /// <summary>
+        /// When user selects a pair that doesn't match, this timer
+        /// resets that pair after 0.75 seconds.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void resetMismatch_Timer_Tick(object sender, EventArgs e)
+        {
+            resetMismatch_Timer.Stop();
+
+            //Hide both icons and reset trackers
+            firstClicked.ForeColor = firstClicked.BackColor;
+            secondClicked.ForeColor = secondClicked.BackColor;
+            firstClicked = null;
+            secondClicked = null;
         }
     }//END class matchingGame_Form
 }//END namespace MatchingGame

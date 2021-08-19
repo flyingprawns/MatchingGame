@@ -29,6 +29,7 @@ namespace MatchingGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.matchingGame_TabelLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.cell1_Label = new System.Windows.Forms.Label();
             this.cell2_Label = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@ namespace MatchingGame
             this.cell14_Label = new System.Windows.Forms.Label();
             this.cell15_Label = new System.Windows.Forms.Label();
             this.cell16_Label = new System.Windows.Forms.Label();
+            this.resetMismatch_Timer = new System.Windows.Forms.Timer(this.components);
             this.matchingGame_TabelLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -277,6 +279,11 @@ namespace MatchingGame
             this.cell16_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.cell16_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
+            // resetMismatch_Timer
+            // 
+            this.resetMismatch_Timer.Interval = 750;
+            this.resetMismatch_Timer.Tick += new System.EventHandler(this.resetMismatch_Timer_Tick);
+            // 
             // matchingGame_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +316,7 @@ namespace MatchingGame
         private System.Windows.Forms.Label cell4_Label;
         private System.Windows.Forms.Label cell3_Label;
         private System.Windows.Forms.Label cell2_Label;
+        private System.Windows.Forms.Timer resetMismatch_Timer;
     }
 }
 
