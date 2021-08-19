@@ -95,6 +95,7 @@ namespace MatchingGame
             this.cell1_Label.TabIndex = 0;
             this.cell1_Label.Text = "c";
             this.cell1_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell1_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell2_Label
             // 
@@ -106,6 +107,7 @@ namespace MatchingGame
             this.cell2_Label.TabIndex = 1;
             this.cell2_Label.Text = "c";
             this.cell2_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell2_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell3_Label
             // 
@@ -117,6 +119,7 @@ namespace MatchingGame
             this.cell3_Label.TabIndex = 2;
             this.cell3_Label.Text = "c";
             this.cell3_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell3_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell4_Label
             // 
@@ -128,6 +131,7 @@ namespace MatchingGame
             this.cell4_Label.TabIndex = 3;
             this.cell4_Label.Text = "c";
             this.cell4_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell4_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell5_Label
             // 
@@ -139,6 +143,7 @@ namespace MatchingGame
             this.cell5_Label.TabIndex = 4;
             this.cell5_Label.Text = "c";
             this.cell5_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell5_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell6_Label
             // 
@@ -150,6 +155,7 @@ namespace MatchingGame
             this.cell6_Label.TabIndex = 5;
             this.cell6_Label.Text = "c";
             this.cell6_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell6_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell7_Label
             // 
@@ -161,6 +167,7 @@ namespace MatchingGame
             this.cell7_Label.TabIndex = 6;
             this.cell7_Label.Text = "c";
             this.cell7_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell7_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell8_Label
             // 
@@ -172,6 +179,7 @@ namespace MatchingGame
             this.cell8_Label.TabIndex = 7;
             this.cell8_Label.Text = "c";
             this.cell8_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell8_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell9_Label
             // 
@@ -183,6 +191,7 @@ namespace MatchingGame
             this.cell9_Label.TabIndex = 8;
             this.cell9_Label.Text = "c";
             this.cell9_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell9_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell10_Label
             // 
@@ -194,6 +203,7 @@ namespace MatchingGame
             this.cell10_Label.TabIndex = 9;
             this.cell10_Label.Text = "c";
             this.cell10_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell10_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell11_Label
             // 
@@ -205,6 +215,7 @@ namespace MatchingGame
             this.cell11_Label.TabIndex = 10;
             this.cell11_Label.Text = "c";
             this.cell11_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell11_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell12_Label
             // 
@@ -216,6 +227,7 @@ namespace MatchingGame
             this.cell12_Label.TabIndex = 11;
             this.cell12_Label.Text = "c";
             this.cell12_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell12_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell13_Label
             // 
@@ -227,6 +239,7 @@ namespace MatchingGame
             this.cell13_Label.TabIndex = 12;
             this.cell13_Label.Text = "c";
             this.cell13_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell13_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell14_Label
             // 
@@ -238,6 +251,7 @@ namespace MatchingGame
             this.cell14_Label.TabIndex = 13;
             this.cell14_Label.Text = "c";
             this.cell14_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell14_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell15_Label
             // 
@@ -249,6 +263,7 @@ namespace MatchingGame
             this.cell15_Label.TabIndex = 14;
             this.cell15_Label.Text = "c";
             this.cell15_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell15_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // cell16_Label
             // 
@@ -260,6 +275,7 @@ namespace MatchingGame
             this.cell16_Label.TabIndex = 15;
             this.cell16_Label.Text = "c";
             this.cell16_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cell16_Label.Click += new System.EventHandler(this.cell_Label_Click);
             // 
             // matchingGame_Form
             // 
