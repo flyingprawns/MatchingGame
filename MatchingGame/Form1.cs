@@ -22,6 +22,7 @@ namespace MatchingGame
             "b", "b", "v", "v", "w", "w", "z", "z"
         };
         private Label firstClicked = null; private Label secondClicked = null;
+        private int timeRemaining = 600;
 
         // ---------
         // Methods
@@ -57,6 +58,7 @@ namespace MatchingGame
             }
 
             //All icons are revealed. Display congratulatory message.
+            timeLeft_Timer.Stop();
             MessageBox.Show("You matched all the icons!", "Winner :)");
             Close();
         }
@@ -137,5 +139,18 @@ namespace MatchingGame
             secondClicked = null;
         }
 
+        private void timeLeft_Timer_Tick(object sender, EventArgs e)
+        {
+            timeRemaining -= 1;
+            gameTimer_Label.Text = "Time left: " + timeRemaining + " seconds";
+
+            //End game after 10 minutes
+            if (timeRemaining <= 0)
+            {
+                timeLeft_Timer.Stop();
+                MessageBox.Show("Time is up! Game Over.", ":(");
+                Close();
+            }
+        }
     }//END class matchingGame_Form
 }//END namespace MatchingGame
