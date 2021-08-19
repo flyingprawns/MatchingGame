@@ -40,6 +40,26 @@ namespace MatchingGame
                 }
             }
         }
+        private void CheckForWinner()
+        {
+            //Check all icons. If any remain hidden, do nothing.
+            foreach (Control c in matchingGame_TabelLayoutPanel.Controls)
+            {
+                Label iconLabel = c as Label;
+                if (iconLabel != null)
+                {
+                    bool iconHidden = iconLabel.ForeColor == iconLabel.BackColor;
+                    if (iconHidden)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            //All icons are revealed. Display congratulatory message.
+            MessageBox.Show("You matched all the icons!", "Winner :)");
+            Close();
+        }
 
         // ---------------------------
         // Windows Form Designer Code
@@ -84,6 +104,9 @@ namespace MatchingGame
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
 
+                //At this point, both labels clicked by the user have been registered. CheckForWinner() ends the game if it succeeds.
+                CheckForWinner();
+
                 //If icons match, keep them revealed. Reset trackers
                 if(firstClicked.Text == secondClicked.Text)
                 {
@@ -96,6 +119,7 @@ namespace MatchingGame
                 resetMismatch_Timer.Start();
             }
         }
+
         /// <summary>
         /// When user selects a pair that doesn't match, this timer
         /// resets that pair after 0.75 seconds.
@@ -112,5 +136,6 @@ namespace MatchingGame
             firstClicked = null;
             secondClicked = null;
         }
+
     }//END class matchingGame_Form
 }//END namespace MatchingGame
